@@ -5,6 +5,11 @@
 #include <windows.h>
 #include "main.h"
 #include "dx2d.h"
+#include "function.h"
+
+Dx2d *dx2d;
+Function f;
+
 
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
@@ -44,16 +49,33 @@ int WINAPI wWinMain(HINSTANCE instance, HINSTANCE prevInstance, PWSTR cmdLine, i
     }
 
     ShowWindow(hwnd, cmdShow);
-    init_direct_2d(hwnd);
+    Dx2d dx2d_mem(hwnd);
+    dx2d = &dx2d_mem;
+
+    f.calculate_function([](FLOAT x, FLOAT y) {
+        return std::cos(10.0 * std::sqrt(x * x + y * y)) / 4;
+        });
 
     // Run the message loop.
 
     MSG msg = { };
-    while (GetMessage(&msg, NULL, 0, 0) > 0)
-    {
-        TranslateMessage(&msg);
-        DispatchMessage(&msg);
-    }
+    auto last_tick = GetTickCount64();
+    do {
+        if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE)) {
+            if (msg.message != WM_QUIT) {
+                TranslateMessage(&msg);
+                DispatchMessage(&msg);
+            }
+            last_tick = GetTickCount64();
+        }
+        else {
+            FLOAT delta = GetTickCount64() - last_tick;
+            delta /= 1000.0;
+            last_tick = GetTickCount64();
+            f.update(delta);
+            f.draw(*dx2d);
+        }
+    } while (msg.message != WM_QUIT);
 
     return 0;
 }
@@ -63,12 +85,12 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     switch (uMsg)
     {
     case WM_DESTROY:
-        destroy_direct_2d();
         PostQuitMessage(0);
         return 0;
-    case WM_PAINT:
-        paint(hwnd);
-        return 0;
+    //case WM_PAINT:
+
+        //f.draw(*dx2d);
+        //return 0;
     }
     return DefWindowProc(hwnd, uMsg, wParam, lParam);
 }
