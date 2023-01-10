@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Pliki źródłowe">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Pliki zasobów">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\ColorPicker">
+      <UniqueIdentifier>{820a19e5-7a97-4742-b5dc-61fdb14df9ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\ColorPicker">
+      <UniqueIdentifier>{d6a0fe7e-af41-4349-82f5-9a55574897f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\RulesCanvas">
+      <UniqueIdentifier>{43e5488e-f53c-422d-9b33-eda922a65fad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\RulesCanvas">
+      <UniqueIdentifier>{fa5c145e-79a2-42a4-9534-a250a001dd69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\WaveFunctionCollapse">
+      <UniqueIdentifier>{e7675d89-f5e3-4dad-9d31-86e2f45e3465}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Generic">
+      <UniqueIdentifier>{0d3869ef-a04a-472b-b821-14f4d3a9b131}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Generic">
+      <UniqueIdentifier>{e074f2e9-cb68-43fd-be35-949db73b9663}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\WaveFunctionCollapse">
+      <UniqueIdentifier>{a6843b9f-e081-4b3c-b7eb-c16abab76b43}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Win32App.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="rules_canvas.cpp">
+      <Filter>Pliki źródłowe\RulesCanvas</Filter>
+    </ClCompile>
+    <ClCompile Include="color_picker\color_picker.cpp">
+      <Filter>Pliki źródłowe\ColorPicker</Filter>
+    </ClCompile>
+    <ClCompile Include="color_picker\color_rect.cpp">
+      <Filter>Pliki źródłowe\ColorPicker</Filter>
+    </ClCompile>
+    <ClCompile Include="visualizer.cpp">
+      <Filter>Pliki źródłowe\WaveFunctionCollapse</Filter>
+    </ClCompile>
+    <ClCompile Include="generator.cpp">
+      <Filter>Pliki źródłowe\WaveFunctionCollapse</Filter>
+    </ClCompile>
+    <ClCompile Include="pixel_matrix.cpp">
+      <Filter>Pliki źródłowe\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="bitmaps.cpp">
+      <Filter>Pliki źródłowe\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="pixel.cpp">
+      <Filter>Pliki źródłowe\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="helper.h">
+      <Filter>Pliki nagłówkowe\Generic</Filter>
+    </ClCompile>
+    <ClCompile Include="color_view.cpp">
+      <Filter>Pliki źródłowe\ColorPicker</Filter>
+    </ClCompile>
+    <ClCompile Include="button.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Win32App.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="rules_canvas.h">
+      <Filter>Pliki nagłówkowe\RulesCanvas</Filter>
+    </ClInclude>
+    <ClInclude Include="color_picker\color_rect.h">
+      <Filter>Pliki nagłówkowe\ColorPicker</Filter>
+    </ClInclude>
+    <ClInclude Include="color_picker\color_picker.h">
+      <Filter>Pliki nagłówkowe\ColorPicker</Filter>
+    </ClInclude>
+    <ClInclude Include="context.hpp">
+      <Filter>Pliki nagłówkowe\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="pixel_matrix.h">
+      <Filter>Pliki nagłówkowe\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="pixel.h">
+      <Filter>Pliki nagłówkowe\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="bitmaps.h">
+      <Filter>Pliki nagłówkowe\Generic</Filter>
+    </ClInclude>
+    <ClInclude Include="visualizer.h">
+      <Filter>Pliki nagłówkowe\WaveFunctionCollapse</Filter>
+    </ClInclude>
+    <ClInclude Include="generator.h">
+      <Filter>Pliki nagłówkowe\WaveFunctionCollapse</Filter>
+    </ClInclude>
+    <ClInclude Include="color_view.h">
+      <Filter>Pliki nagłówkowe\ColorPicker</Filter>
+    </ClInclude>
+    <ClInclude Include="button.h">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="slider.bmp">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
