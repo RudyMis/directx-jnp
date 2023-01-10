@@ -163,6 +163,7 @@
     <ClInclude Include="Win32App.h" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\..\..\..\..\Downloads\doggo.png" />
     <Image Include="slider.bmp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

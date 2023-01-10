@@ -121,5 +121,8 @@
     <Image Include="slider.bmp">
       <Filter>Pliki zasobów</Filter>
     </Image>
+    <Image Include="..\..\..\..\..\Downloads\doggo.png">
+      <Filter>Pliki zasobów</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -31,13 +31,13 @@ HRESULT Win32App::init_window(HINSTANCE instance) {
 	wcex.lpszMenuName = nullptr;
 	wcex.hCursor = LoadCursor(nullptr, IDI_APPLICATION);
 	wcex.lpszClassName = L"wfc";
-	//wcex.hIcon = 
+	wcex.hIcon = LoadIcon(instance, L"doggo.png"); // Nie dzia³a :c
 
 	RegisterClassEx(&wcex);
 
 	hwnd = CreateWindow(
 		L"wfc",
-		L"Autysta Malarz",
+		L"Artysta Malarz",
 		WS_OVERLAPPEDWINDOW,
 		CW_USEDEFAULT,
 		CW_USEDEFAULT,
@@ -233,14 +233,6 @@ LRESULT Win32App::wnd_proc(HWND hwnd, UINT message, WPARAM wparam, LPARAM lparam
 		app->check_for_click(app->button, pt);
 		return 0;
 	}
-	/*case WM_KEYDOWN:
-	{
-		if (!(wparam & VK_ACCEPT)) {
-			break;
-		}
-		app->visualizer.setup_animation(app->rules_canvas.get_pixels());
-		return 0;
-	}*/
 	case WM_MOUSEMOVE:
 	{
 		if (!(wparam & MK_LBUTTON)) {
