@@ -1,9 +1,20 @@
-#define WIN32_LEAN_AND_MEAN
+#include "Win32App.h"
 
-#include <Windows.h>
-#include <d3d12.h>
+int WINAPI wWinMain(HINSTANCE instance, HINSTANCE prevInstance, PWSTR cmdLine, int cmdShow) {
+    HeapSetInformation(nullptr, HeapEnableTerminationOnCorruption, nullptr, 0);
 
-int WINAPI wWinMain(HINSTANCE instance, HINSTANCE prevInstance, PWSTR cmdLine, int cmdShow)
-{
+    if (!SUCCEEDED(CoInitializeEx(nullptr, COINIT_APARTMENTTHREADED))) {
+        return -1;
+    }
+    Win32App app(800, 600);
 
+    if (!SUCCEEDED(app.init_window(instance))) {
+        CoUninitialize();
+        return -1;
+    }
+
+    app.run_message_loop();
+    CoUninitialize();
+
+    return 0;
 }

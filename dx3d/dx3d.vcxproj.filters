@@ -13,30 +13,91 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Pliki źródłowe\Engine">
+      <UniqueIdentifier>{58f47cb2-a36b-45fd-b02c-49170763d4d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Main">
+      <UniqueIdentifier>{4223ddf4-762c-4e79-b445-b69417164a46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Main">
+      <UniqueIdentifier>{1956950c-e61b-4709-ba16-aa583b26cc8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Engine">
+      <UniqueIdentifier>{ec8e3a54-a3de-4477-adaa-ebfd4f2e2156}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Triangle.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="DepthBuffer.cpp">
+      <Filter>Pliki źródłowe\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Pliki źródłowe\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Win32App.cpp">
+      <Filter>Pliki źródłowe\Main</Filter>
+    </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>Pliki źródłowe</Filter>
+      <Filter>Pliki źródłowe\Main</Filter>
     </ClCompile>
-    <ClCompile Include="dx3d_handle.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="win32app.cpp">
-      <Filter>Pliki źródłowe</Filter>
-    </ClCompile>
-    <ClCompile Include="DxBase.cpp">
-      <Filter>Pliki źródłowe</Filter>
+    <ClCompile Include="VertexBuffer.cpp">
+      <Filter>Pliki źródłowe\Engine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="dx3d_handle.h">
+    <ClInclude Include="Triangle.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="win32app.h">
+    <ClInclude Include="Mesh.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="DxBase.h">
+    <ClInclude Include="Camera.h">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
+    <ClInclude Include="Win32App.h">
+      <Filter>Pliki nagłówkowe\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="dx12helper.h">
+      <Filter>Pliki nagłówkowe\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="helper.h">
+      <Filter>Pliki nagłówkowe\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="DepthBuffer.h">
+      <Filter>Pliki nagłówkowe\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.h">
+      <Filter>Pliki nagłówkowe\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer.h">
+      <Filter>Pliki nagłówkowe\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexData.h">
+      <Filter>Pliki nagłówkowe\Engine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="pixel_shader.hlsl">
+      <Filter>Pliki zasobów</Filter>
+    </CustomBuild>
+    <CustomBuild Include="vertex_shader.hlsl">
+      <Filter>Pliki zasobów</Filter>
+    </CustomBuild>
+    <CustomBuild Include="assets\cube.obj">
+      <Filter>Pliki zasobów</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="shader.hlsl">
+      <Filter>Pliki zasobów</Filter>
+    </FxCompile>
   </ItemGroup>
 </Project>
