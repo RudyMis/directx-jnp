@@ -85,12 +85,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="pixel_shader.hlsl">
-      <Filter>Pliki zasobów</Filter>
-    </CustomBuild>
-    <CustomBuild Include="vertex_shader.hlsl">
-      <Filter>Pliki zasobów</Filter>
-    </CustomBuild>
     <CustomBuild Include="assets\cube.obj">
       <Filter>Pliki zasobów</Filter>
     </CustomBuild>
